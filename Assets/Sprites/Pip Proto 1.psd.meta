@@ -1,0 +1,454 @@
+fileFormatVersion: 2
+guid: 2b67b706b65b5ee4a8c321ea0033f408
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Pip Proto 1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 126
+        width: 126
+        height: 186
+      alignment: 9
+      pivot: {x: 0.9668719, y: 0.36522108}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b63b644684aa11548bf17bd7f49b2981
+      internalID: -295492696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pip Proto 1_1
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 208
+        width: 196
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f34a182ebb203843a9182ac8328c5a7
+      internalID: -421659485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pip Proto 1_2
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 157
+        width: 141
+        height: 102
+      alignment: 9
+      pivot: {x: 0.15535438, y: 0.1672607}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36e1f75380d098147ad8d59d34cd0652
+      internalID: 1861321047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pip Proto 1_3
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 16
+        width: 65
+        height: 101
+      alignment: 9
+      pivot: {x: 0.4406653, y: 0.6985652}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 441c491c54a27b5409612e6bc1bb433b
+      internalID: 326069525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pip Proto 1_4
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 67
+        width: 31
+        height: 42
+      alignment: 9
+      pivot: {x: 0.51244134, y: 0.8581267}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6acbb8d28eac784fa674caf4f5a0776
+      internalID: 669968859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pip Proto 1_5
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 91
+        width: 65
+        height: 101
+      alignment: 9
+      pivot: {x: 0.46439937, y: 0.6756539}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da4d1ee4094aaec4289a915f18078a25
+      internalID: -886836390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pip Proto 1_6
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 96
+        width: 46
+        height: 61
+      alignment: 9
+      pivot: {x: 0.42454198, y: 0.73393375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cba579db85e024447a236abca2ddf4fc
+      internalID: 76535725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pip Proto 1_7
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 64
+        width: 46
+        height: 61
+      alignment: 9
+      pivot: {x: 0.3993895, y: 0.733934}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58d217848d43e4543a938e791ab6f6c8
+      internalID: -973249009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pip Proto 1_8
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 61
+        width: 31
+        height: 43
+      alignment: 9
+      pivot: {x: 0.43779534, y: 0.82289034}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 725fa63683d7b4144883fa0f25b4e867
+      internalID: 1136351189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pip Proto 1_9
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 43
+        width: 31
+        height: 42
+      alignment: 9
+      pivot: {x: 0.48755917, y: 0.8489438}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74bf2370d45f8af47a647e739870ff95
+      internalID: -892827988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pip Proto 1_10
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 45
+        width: 31
+        height: 43
+      alignment: 9
+      pivot: {x: 0.45023665, y: 0.8856746}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 900320a5df33781418353912f2d62e77
+      internalID: -1458279558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pip Proto 1_11
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 17
+        width: 38
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d229bbf10627b0f43bc172c89ecfea54
+      internalID: 1546466439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pip Proto 1_12
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 14
+        width: 38
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6f92b88ed67a9b4abf317a5eb52c7a4
+      internalID: -1434579628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pip Proto 1_13
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 9
+        width: 41
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfb1bc757c37f2a4db9be515f3846205
+      internalID: 43317813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pip Proto 1_14
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 15
+        width: 41
+        height: 28
+      alignment: 9
+      pivot: {x: 0.48118627, y: 0.45867744}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80b799c3c3b2fc24fbe0aee89838b2cf
+      internalID: -1937571146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Pip Proto 1_4: 669968859
+      Pip Proto 1_12: -1434579628
+      Pip Proto 1_8: 1136351189
+      Pip Proto 1_14: -1937571146
+      Pip Proto 1_10: -1458279558
+      Pip Proto 1_1: -421659485
+      Pip Proto 1_0: -295492696
+      Pip Proto 1_3: 326069525
+      Pip Proto 1_13: 43317813
+      Pip Proto 1_9: -892827988
+      Pip Proto 1_11: 1546466439
+      Pip Proto 1_7: -973249009
+      Pip Proto 1_2: 1861321047
+      Pip Proto 1_6: 76535725
+      Pip Proto 1_5: -886836390
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

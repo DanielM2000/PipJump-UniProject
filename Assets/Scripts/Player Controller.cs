@@ -27,9 +27,9 @@ public class PlayerController : MonoBehaviour {
     public LayerMask whatIsGround;
 
 
-
+    //varriable for how many extra jumps the players can perform.
     private int extraJumps;
-
+    //variable used to see how many extra jumps that the player has remaining.
     public int extraJumpsValue;
 
     void Start(){
@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour {
     //Fixedupdate is used to manage all physics in the game.
     void FixedUpdate(){
 
-
+        //this line of code generates a circle at the players feet, which will be used to check if the player is jumping.
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
 
         moveInput = Input.GetAxis("Horizontal");
@@ -66,6 +66,7 @@ public class PlayerController : MonoBehaviour {
             extraJumps = extraJumpsValue;
         }
 
+        //used to return true if the space key & the extrajumps are greater than 0, if the space button is pressed then extra jumps decreases by 1.
         if(Input.GetKeyDown(KeyCode.Space) && extraJumps > 0){
             rb.velocity = Vector2.up * jumpForce;
             extraJumps--;
