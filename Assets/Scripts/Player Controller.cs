@@ -26,6 +26,8 @@ public class PlayerController : MonoBehaviour {
 
     public LayerMask whatIsGround;
 
+    //used to reference the animator in Unity.
+    private Animator anim;
 
     //varriable for how many extra jumps the players can perform.
     private int extraJumps;
@@ -36,7 +38,9 @@ public class PlayerController : MonoBehaviour {
 
         extraJumps = extraJumpsValue;
 
-       //this GetComponent is used so that we can change the rigidbody via script.
+        //Grab references for rigidbody and animator form object.
+        anim = GetComponent<Animator>();
+
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -46,11 +50,13 @@ public class PlayerController : MonoBehaviour {
         //this line of code generates a circle at the players feet, which will be used to check if the player is jumping.
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
 
-        moveInput = Input.GetAxis("Horizontal");
+        moveInput = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
 
+     
+
         //if statement used to check if player is moving right or left, then determines if its true or false
-        if(facingRight == false && moveInput > 0)
+        if (facingRight == false && moveInput > 0)
         {
             flip();
         } else if (facingRight == true && moveInput < 0)
@@ -66,6 +72,20 @@ public class PlayerController : MonoBehaviour {
             extraJumps = extraJumpsValue;
         }
 
+        if(isGrounded == true && Input.GetKeyDown(KeyCode.Space))
+        {
+            anim.SetTrigger("TakeOff");
+
+        }
+        if (isGrounded == true)
+        {
+            anim.SetBool("IsJumping", false);
+        }
+
+        else
+        {
+            anim.SetBool("IsJumping", true);
+        }
         //used to return true if the space key & the extrajumps are greater than 0, if the space button is pressed then extra jumps decreases by 1.
         if(Input.GetKeyDown(KeyCode.Space) && extraJumps > 0){
             rb.velocity = Vector2.up * jumpForce;
@@ -73,6 +93,8 @@ public class PlayerController : MonoBehaviour {
         } else if(Input.GetKeyDown(KeyCode.Space) && extraJumps == 0 && isGrounded == true){
             rb.velocity = Vector2.up * jumpForce;
         }
+        //Set Animator Parameters.
+        anim.SetBool("IsRunning", moveInput != 0);
     }
 
     //this flip is used to swap the x value from positve to negative depending on the else if satement.
