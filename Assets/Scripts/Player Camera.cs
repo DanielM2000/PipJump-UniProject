@@ -17,6 +17,6 @@ public class Camera : MonoBehaviour
     void Update()
     {
         //used to make the camera follow the player on X,Y and Z.
-        transform.position = new Vector3(target.transform.position.x, transform.position.y, -10);
+        transform.position = new Vector3(target.transform.position.x, target.transform.position.y, -10);
     }
 }
