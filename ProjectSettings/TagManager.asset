@@ -7,8 +7,10 @@ TagManager:
   - Checkpoint
   - FallDetector
   - Spike
-  - coin
   - Cheese
+  - Big cheese
+  - MyCheese
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -17,7 +19,7 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
+  - Enemy
   - 
   - 
   - 
