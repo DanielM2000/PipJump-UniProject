@@ -30,12 +30,6 @@ public class PlayerController : MonoBehaviour
 
     //used to reference the animator in Unity.
     private Animator anim;
-
-
-    //Used to dectect the FallDetector
-    private Vector3 RespawnPoint;
-    public GameObject FallDetector;
-
     //varriable for how many extra jumps the players can perform.
     private int extraJumps;
     //variable used to see how many extra jumps that the player has remaining.
@@ -51,7 +45,6 @@ public class PlayerController : MonoBehaviour
 
         rb = GetComponent<Rigidbody2D>();
 
-        RespawnPoint = transform.position;
     }
 
     //Fixedupdate is used to manage all physics in the game.
@@ -113,28 +106,9 @@ public class PlayerController : MonoBehaviour
         //Set Animator Parameters.
         anim.SetBool("IsRunning", moveInput != 0);
 
-        // FallDetectors position changes based on players x position
-        FallDetector.transform.position = new Vector2(transform.position.x, FallDetector.transform.position.y);
-
-
-    }
-
-    // If the player collides with the fall detector they will respawn either in the previous position or at the last checkpoint.
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "FallDetector")
-        {
-            transform.position = RespawnPoint;
         }
-        else if (collision.tag == "Checkpoint")
-        {
-            RespawnPoint = transform.position;
-            collision.GetComponent<Collider2D>().enabled = false;
-            collision.GetComponent<Animator>().SetTrigger("Appear");
-        }
-      
-    }
 
+   
     //this flip is used to swap the x value from positve to negative depending on the else if satement.
     void flip()
     {

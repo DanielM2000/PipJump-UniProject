@@ -27,13 +27,20 @@ public class Health : MonoBehaviour
         else
         {
             anim.SetTrigger("die");
+            GetComponent<PlayerController>().enabled = false;
         }
     }
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-            TakeDamage(1);
-    }
 
+    public void AddHealth(float _value)
+    {
+        currentHealth = Mathf.Clamp(currentHealth + _value, 0, startingHealth);
+    }
+    public void Respawn()
+    {
+        GetComponent<PlayerController>().enabled = true;
+        AddHealth(startingHealth);
+        anim.ResetTrigger("die");
+        anim.Play("Idle");
+    }
 }
 
