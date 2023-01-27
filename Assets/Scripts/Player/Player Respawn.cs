@@ -11,8 +11,6 @@ public class PlayerRespawn : MonoBehaviour
     //used to reset the players health after respawn.
     private Health playerHealth;
 
-   
-
     private void Awake()
     {
         playerHealth = GetComponent<Health>();
@@ -22,12 +20,12 @@ public class PlayerRespawn : MonoBehaviour
 
         transform.position = currentCheckpoint.position;
         playerHealth.Respawn();
-       
+
 
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+
         if (collision.transform.tag == "Checkpoint")
         {
             currentCheckpoint = collision.transform;
@@ -35,6 +33,7 @@ public class PlayerRespawn : MonoBehaviour
             collision.GetComponent<Animator>().SetTrigger("Appear");
         }
     }
-   
 }
+
+    
 

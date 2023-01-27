@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.UIElements;
+using UnityEngine.Windows;
+using Input = UnityEngine.Input;
 
 public class PlayerController : MonoBehaviour
 {
@@ -12,6 +15,8 @@ public class PlayerController : MonoBehaviour
     public float jumpForce;
     //moveInput detects if left or right button is pressed.
     private float moveInput;
+
+    private float horizontal;
 
     //Rigidbody 2D is connected to Unity.
     private Rigidbody2D rb;
@@ -28,12 +33,30 @@ public class PlayerController : MonoBehaviour
 
     public LayerMask whatIsGround;
 
+    private bool isWall;
+
+    //this us used to check if the player is touching a wall.
+    public LayerMask whatIsWall;
+
     //used to reference the animator in Unity.
     private Animator anim;
     //varriable for how many extra jumps the players can perform.
     private int extraJumps;
     //variable used to see how many extra jumps that the player has remaining.
     public int extraJumpsValue;
+
+    //used to check whether the player is wall sliding and how fast the player is wall sliding.
+    public Transform wallCheck;
+    public bool isWallTouch;
+    public bool isSilding;
+    public float wallSlidingSpeed;
+    public float wallJumpDuration;
+    public Vector2 wallJumpForce;
+    public bool wallJumping;
+    private BoxCollider2D boxCollider;
+
+
+
 
     void Start()
     {
@@ -45,6 +68,7 @@ public class PlayerController : MonoBehaviour
 
         rb = GetComponent<Rigidbody2D>();
 
+        boxCollider = GetComponent<BoxCollider2D>();
     }
 
     //Fixedupdate is used to manage all physics in the game.
@@ -53,6 +77,16 @@ public class PlayerController : MonoBehaviour
 
         //this line of code generates a circle at the players feet, which will be used to check if the player is jumping.
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
+        isWallTouch = Physics2D.OverlapBox(wallCheck.position, new Vector2(0.3f,1.6f), 0, whatIsWall);
+
+        if(isWallTouch && !isWall && moveInput != 0)
+        {
+            isSilding = true;
+        }
+        else
+        {
+            isSilding = false;
+        }
 
         moveInput = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
@@ -67,6 +101,18 @@ public class PlayerController : MonoBehaviour
         else if (facingRight == true && moveInput < 0)
         {
             flip();
+        }
+       if (isSilding)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -wallSlidingSpeed, float.MaxValue));
+        }
+       if (wallJumping)
+        {
+            rb.velocity = new Vector2(-moveInput * wallJumpForce.x, wallJumpForce.y);
+        }
+       else
+        {
+            rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
         }
     }
 
@@ -83,6 +129,11 @@ public class PlayerController : MonoBehaviour
         {
             anim.SetTrigger("TakeOff");
 
+        }
+        else if(isSilding)
+        {
+            wallJumping = true;
+            Invoke("StopWallJump", wallJumpDuration);
         }
         if (isGrounded == true)
         {
@@ -108,6 +159,11 @@ public class PlayerController : MonoBehaviour
 
         }
 
+    void StopWallJump()
+    {
+        wallJumping = false;
+    }
+   
    
     //this flip is used to swap the x value from positve to negative depending on the else if satement.
     void flip()
@@ -117,4 +173,5 @@ public class PlayerController : MonoBehaviour
         Scaler.x *= -1;
         transform.localScale = Scaler;
     }
+   
 }

@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class SwitchBehaviour : MonoBehaviour
 {
-
+    //this script is used to check whether our player has got the correct key.
     [SerializeField] DoorBehaviour _doorBehaviour;
 
     [SerializeField] bool _isDoorOpenSwitch;
